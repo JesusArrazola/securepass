@@ -1,4 +1,3 @@
-const bodyParser = require("body-parser");
 const express = require("express");
 const generate = require("../../controllers/passwordGenerator");
 const { buildParamsObject } = require("../../helpers/parameterObject");
