@@ -10,7 +10,8 @@ router.get("/", (req, res) => {
 
   let result = generate(parameters);
 
-  res.json(result);
+  if (result !== null) res.json(result);
+  else res.sendStatus(400);
 });
 
 module.exports = router;
