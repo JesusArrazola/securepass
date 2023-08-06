@@ -1,27 +1,23 @@
 const crypto = require("crypto");
 
-const setStrength = (parameters) => {
-  let { specialCharacters } = parameters;
-  let length = parameters.length || 12;
+const setStrength = (length) => {
+  if (length <= 10) return "Good";
+  if (length <= 18) return "Strong";
 
-  if (length >= 8 && length <= 11) return "Good";
-  if (length >= 12 && length <= 20) {
-    if (!specialCharacters) {
-      return "Strong";
-    } else {
-      if (length == 20) return "Unbreakable";
-      else return "Very Strong";
-    }
-  }
+  return "Very strong";
 };
 
 const generate = (parameters) => {
   let { length, specialCharacters } = parameters;
 
-  let strength = setStrength(parameters);
-
   const passLength = length || 12;
-  if (passLength < 8 || passLength > 20) return null;
+
+  let strength = setStrength(passLength);
+
+  if (passLength < 8 || passLength > 20) {
+    let error = "Invalid parameters";
+    return { error };
+  }
 
   let charMap =
     "qrstEFGefC567aghijklmVWXYnoKLD34MZ12uvwxyp89NOPQRSTUHIJzABbcd0";
