@@ -9,4 +9,4 @@ const v1Router = require("./api/v1");
 app.use("/v1", v1Router);
 
 //Server listennnig
-app.listen(PORT, () => {});
+app.listen(PORT, () => { console.log("App running on "+PORT) });
