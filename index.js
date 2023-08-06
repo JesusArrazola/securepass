@@ -10,3 +10,5 @@ app.use("/v1", v1Router);
 
 //Server listennnig
 app.listen(PORT, () => {});
+
+module.exports = app;
