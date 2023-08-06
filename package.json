@@ -4,8 +4,8 @@
   "description": "Dont get emotional, that aint like you",
   "main": "index.js",
   "scripts": {
-    "test": "start",
-    "dev": "nodemon index"
+   "start":"node app",
+    "dev": "nodemon app"
   },
   "repository": {
     "type": "git",

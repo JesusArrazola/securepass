@@ -5,10 +5,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 //Version routes
-const v1Router = require("./routes/v1/v1Routes");
+const v1Router = require("./api/v1");
 app.use("/v1", v1Router);
 
 //Server listennnig
 app.listen(PORT, () => {});
-
-module.exports = app;
