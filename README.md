@@ -34,7 +34,7 @@ Example response:
 }
 ```
 ### Request 
-`curl https://api.example.com/v1/length=16&specialCharacters=true`
+`curl https://api.example.com/v1/?length=16&specialCharacters=true`
 ### Response
 ```json
 {
